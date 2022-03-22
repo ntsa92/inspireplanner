@@ -1,0 +1,30 @@
+h1{
+    height: 20px;
+    border-bottom: 2px solid rgb(229, 229, 229);
+    margin-bottom: 10px;
+}
+lightning-icon{
+    background-color: rgb(120, 176, 253);
+}
+/*lightning-icon{
+    background-color: rgb(120, 176, 253);
+}*/
+.div_block{
+    /*background-color: rgb(219, 219, 226);*/    
+    margin-bottom: 20px;
+    margin-left: 20px;   
+}
+.div_span{
+    /*background-color: rgb(199, 124, 170);*/
+    display: inline-block;
+    width: 130px;
+    margin-right: 10px;
+    overflow: hidden;
+}
+.div_span span{
+    color:rgb(116, 116, 116);
+}
+.div_icon{
+    /*background-color: rgb(185, 167, 85);*/
+    display: inline-block;
+}

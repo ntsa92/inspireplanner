@@ -1,0 +1,68 @@
+.custom-datatable table>thead .slds-cell-fixed.slds-has-button-menu, .custom-datatable table>thead .slds-cell-fixed {
+	background: white;
+}
+
+.slds-button.slds-button_icon.slds-cell-edit__button.slds-m-left_x-small {
+	display: none;
+}
+
+.slds-cell-edit:hover {
+	background: red;
+}
+
+.slds-table_striped tbody tr:nth-of-type(even)>td, .slds-table_striped tbody tr:nth-of-type(even)>th, .slds-table--striped tbody tr:nth-of-type(even)>td, .slds-table--striped tbody tr:nth-of-type(even)>th {
+	background: #f7f9fa;
+}
+
+.slds-hint-parent:focus {
+	background: #ffefbb;
+}
+
+.slds-table_bordered tbody td, .slds-table_bordered tbody th, .slds-table--bordered tbody td, .slds-table--bordered tbody th {
+	border-top: none;
+}
+
+.slds-table th:focus, .slds-table th.slds-has-focus, .slds-table [role=gridcell]:focus, .slds-table [role=gridcell].slds-has-focus {
+	box-shadow: none;
+}
+
+.slds-table th:hover, .slds-table th.slds-has-hover, .slds-table [role=gridcell]:hover, .slds-table [role=gridcell].slds-has-hover {
+	box-shadow: none;
+}
+
+.slds-table .slds-cell-edit.slds-is-edited, .slds-table .slds-cell-edit.slds-is-edited:hover {
+	background-color: initial;
+}
+
+.slds-table_edit.slds-table tbody tr:hover>.slds-cell-edit.slds-is-edited, .slds-table--edit.slds-table tbody tr:hover>.slds-cell-edit.slds-is-edited {
+    background-color: none;
+}
+
+.slds-popover {
+	box-shadow: none;
+	border: none;
+	background: transparent;
+	min-height: 2.5rem;
+	width: 138px;
+}
+
+/* .slds-popover .slds-popover_edit {
+	width: 120px;
+} */
+
+.slds-input {
+	box-shadow: none
+}
+
+.slds-hint-parent:hover {
+	background: red;
+}
+
+.slds-popover_edit .slds-popover__body, .slds-popover--edit .slds-popover__body {
+    padding: 5px 0px;
+	width: 138px;
+}
+
+.slds-p-left_xx-small, .slds-p-left--xx-small {
+    padding-left: none;
+}

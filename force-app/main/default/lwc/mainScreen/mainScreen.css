@@ -1,0 +1,23 @@
+.mainScreen_uppermost_div{
+    width:1680px;
+    height:740px;     
+    background-color:white;
+    border-top: 8px solid rgb(233, 29, 29);
+    margin: -13px 0px 0px 0px;
+}
+.mainScreen_menu_principal_div{
+    height:100%; 
+    box-shadow: rgb(199, 198, 198) 5px 5px 10px;    
+}
+.mainScreen_menu_secondaire_div{
+    border-bottom: 4px solid rgb(11, 11, 12);
+}
+.mainScreen_central_div{
+    height:100%; 
+    width:93%; 
+    padding-left:15px;
+}
+.mainScreen_table_wrapper_div{
+    overflow:auto; 
+    height:91%;  
+}

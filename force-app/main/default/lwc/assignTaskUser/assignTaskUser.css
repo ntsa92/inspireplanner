@@ -1,0 +1,57 @@
+p {
+    font-family: 'Salesforce Sans', Arial, sans-serif;
+    color: rgb(245, 245, 241);
+    text-align: center;
+}
+.th_width{
+    width:90px;
+}
+h1{
+    font-weight: bold;
+    font-size: large;
+    color: rgb(3, 45, 96);   
+}
+.text_style{
+    color:rgb(145, 145, 145);
+}
+table th{
+    color:rgb(145, 145, 145);  
+}
+.search_contact_or_user_block{
+    display: inline-block;
+}
+.search_contact_or_user_block label{
+    font-weight:bold;
+}
+.search_contact_or_user_block input{
+    width:300px; 
+    margin:5px 3px 12px 10px ;
+}
+button{
+   background-color:rgb(3, 45, 96) ; 
+}
+lightning-button-icon{
+    float: right;
+}
+.assign_block_header{
+   background-color: rgb(145, 145, 145);
+}
+.assign_task_div{
+   margin-top: 3px;
+   margin-bottom: 10px;
+}
+.assign_task_div button, .div_modal_footer button{
+    margin-left: 15px;
+ }
+.div_above_table{
+    height:140px; 
+    overflow:auto;
+}
+.div_below_table{
+    height:80px; 
+    overflow:auto;
+}
+.div_modal_footer{
+    background-color: white;
+    border-bottom: 0px;
+}

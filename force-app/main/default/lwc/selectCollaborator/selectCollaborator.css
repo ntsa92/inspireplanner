@@ -1,0 +1,60 @@
+.start{
+    font-weight: bold;
+    color:rgb(9, 18, 43) ;
+    display: inline-block;
+}
+.div_table{
+    height:200px;
+    overflow:auto;
+    margin-top: 20px;
+}
+tr td{
+    border-style: none;
+}
+.th_width_x1{
+    width: 150px;
+}
+.th_width_x2{
+    width: 100px;
+}
+.slds-modal__header{
+    border-bottom: 2px solid rgb(9, 18, 43);
+}
+
+.slds-modal__header lightning-button-icon{
+    float: right;
+}
+.slds-form-element__control{
+    width: 80%;
+    display: inline-block;
+    margin-right: 20px;  
+}
+.slds-form-element__control p {
+    display: inline-block;
+    font-weight: bold;
+    
+}
+.slds-input{
+    display: inline-block;
+    border: 1px solid grey;
+    width: 58%;
+    margin-left: 10px;
+}
+.slds-button_success{
+    display: inline-block;
+    position: relative;
+    font-weight: bold;
+    color: white; 
+    background-color:rgb(26, 47, 90) ;
+    border: none;
+    width: 16%;
+}
+.end{
+    text-align: center;
+}
+.endbutton{
+    background-color:rgb(26, 47, 90) ;
+    width: 20%;
+    border: none;
+    margin-right: 20px;
+}

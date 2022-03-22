@@ -1,0 +1,47 @@
+h1{
+    font-weight: bold;
+    font-size: large;
+    color: rgb(3, 45, 96);   
+ }
+.modal_header_x{
+    border-bottom: 3px solid rgb(3, 45, 96);
+}
+.text_style{
+    color:rgb(145, 145, 145);
+}
+.add_collaborator_block{
+    display: inline-block;
+}
+button{
+   background-color:rgb(3, 45, 96) ; 
+   font-size: smaller;
+   width: 100px;
+   color:rgb(174, 174, 174);
+}
+lightning-button-icon{
+    float: right;
+}
+.div_field{
+   height: 40px;
+}
+.div_container{
+    width:fit-content;
+    height: fit-content;   
+}
+.div_field_x2{
+    width: 370px;
+    /*background-color: blue;*/
+}
+.div_field_x3{
+    width: 110px;
+    padding-right: 10px;   
+   /* background-color: green; */   
+}
+.div_field_x4{
+    width: 470px;
+    /*background-color: rgb(240, 110, 201); */ 
+    margin-right: 50px;  
+}
+.div_modal_footer{
+    background-color:rgb(255, 255, 255);
+}

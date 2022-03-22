@@ -1,0 +1,108 @@
+<template>
+	<section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+		class="slds-modal slds-fade-in-open">
+		<div class="slds-modal__container">
+			<button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse">
+               <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                 <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+               </svg>
+               <span class="slds-assistive-text">Cancel and close</span>
+           </button>
+			<div class="slds-modal__header modal_header_x">
+				<lightning-button-icon icon-name="utility:close" title="Link" size="x-small"></lightning-button-icon>				
+				<h1 id="modal-heading-01">SHARE PROJECT</h1>
+			</div>
+			<div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+			  <div class="form">
+				<div class="slds-form-element form_element_x">
+					<label class="slds-form-element__label share_label" for=" ">
+						Share To:
+					</label>
+					<div class="slds-form-element__control form_element_control_block">
+						<lightning-input class="form_element_control_item" id="form-element-01" name="enter-search" label=" " type="text">
+						</lightning-input>
+						<lightning-button-icon class="search_icon" icon-name="utility:search" variant="brand" alternative-text="Zoom out"
+								   title="Zoom out">
+					   </lightning-button-icon>
+				  </div>
+				</div>
+				<div class="slds-form-element form_element_x">
+					<label class="slds-form-element__label share_label" for=" ">
+						Permission Level:
+					</label>
+					<div class="slds-form-element__control form_element_control_block">										
+				      <span class="slds-radio form_element_control_radio_item">
+						<input type="radio" id="radio-81" value="radio-81" name="modal1" checked="" />
+						<label class="slds-radio__label" for="radio-81">
+						  <span class="slds-radio_faux"></span>
+						  <span class="slds-form-element__label">Viewer</span>
+						</label>
+					   </span>	
+					   <span class="slds-radio form_element_control_radio_item">
+						<input type="radio" id="radio-82" value="radio-82" name="modal1" checked="" />
+						<label class="slds-radio__label" for="radio-82">
+						  <span class="slds-radio_faux"></span>
+						  <span class="slds-form-element__label">Editor</span>
+						</label>
+					   </span>					  
+			   	  </div>
+				</div>
+				<div class="slds-form-element form_element_x">
+					<label class="slds-form-element__label share_label" for=" ">
+						Tasks Visibility:
+					</label>
+					<div class="slds-form-element__control form_element_control_block">										
+						<span class="slds-radio form_element_control_radio_item">
+							<input type="radio" id="radio-83" value="radio-83" name="modal2" checked="" />
+							<label class="slds-radio__label" for="radio-83">
+							  <span class="slds-radio_faux"></span>
+							  <span class="slds-form-element__label">Assigned Tasks Only</span>
+							</label>
+						   </span>	
+						   <span class="slds-radio form_element_control_radio_item">
+							<input type="radio" id="radio-84" value="radio-84" name="modal2" checked="" />
+							<label class="slds-radio__label" for="radio-84">
+							  <span class="slds-radio_faux"></span>
+							  <span class="slds-form-element__label">Full Project</span>
+							</label>
+						   </span>	
+			   	  </div>
+				</div>
+				<div class="slds-form-element form_element_x">
+					<label class="slds-form-element__label share_label" for="checkbox-unique-id-30">
+						Send Email
+					</label>					
+					<div class="slds-form-element__control form_element_control_block">
+						<span class="slds-checkbox slds-checkbox_standalone">
+						  <input  type="checkbox" name="default" id="checkbox-unique-id-30" value="checkbox-unique-id-31" />
+						<span class="slds-checkbox_faux checkbox_faux_x"></span>
+					</span>
+					</div>
+				</div>
+				<div class="slds-form-element form_element_x">
+					<label class="slds-form-element__label share_label">
+					  Suject:
+					</label>
+					<div class="slds-form-element__control form_element_input_control_block">
+						<lightning-input type="text" label=" " value="You've been invited to a project"></lightning-input>
+					</div>
+				</div>	
+				<div class="slds-form-element form_element_x">
+					<label class="slds-form-element__label text_erea_outer_label">
+					  Message:
+					</label>
+					<div class="slds-form-element__control form_element_text_erea_control_block">
+						<lightning-textarea name="input4" placeholder="You've bean invited to participate to a project" label=" ">
+						</lightning-textarea>
+					</div>
+				</div>				
+				<div class="slds-align_absolute-center div_modal_footer modal_footer_x">
+					<button class="slds-button slds-button_brand">Share</button>
+					<button class="slds-button slds-button_brand">Cancel</button>
+				</div>
+			  </div>				
+			</div>
+		</div>
+	</section>
+	<div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+</template>

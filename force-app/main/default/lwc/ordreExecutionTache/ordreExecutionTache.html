@@ -1,0 +1,43 @@
+<template>
+	<section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+		   class="slds-modal slds-fade-in-open">
+	  <div class="slds-modal__container div_container">	
+		<div class="slds-modal__content slds-p-around_medium modal_content_x" id="modal-content-id-1">					
+		  <div class="form app slds-p-around_x-large">
+		     <div class="slds-form-element__control divContainer">
+				<label class="slds-form-element__label label">From:</label>
+			   <span class="slds-badge inlineBlock badge" >
+				   Build high-level schema
+			   </span>
+			 </div > 
+		     <div class="slds-form-element__control divContainer">
+			   <label class="slds-form-element__label label">To:</label>
+		 	   <span class="slds-badge inlineBlock badge" >Prepare kick-off presentation</span>
+		     </div>
+		     <div class="slds-form-element__control divContainer comboBox">
+			   <label class="slds-form-element__label label">Type:</label>
+			   <lightning-combobox 
+			      class="inlineBlock" 
+				  name="progress" 
+				  label=" " 
+				  value={value} 
+				  placeholder=" " 
+				  options={options} 
+				  onchange={handleChange}>
+			   </lightning-combobox>
+		    </div>
+
+		     <div class="slds-form-element__control divContainer">
+				 <label class="slds-form-element__label label">Lag:</label>
+				 <input class="slds-input inlineBlock comboBoxBorder" style="background-color:white;" type="number" name="number">
+		     </div>
+		    <div class="slds-modal__footer divButton">
+			  <button class="slds-button slds-button_brand"><span>Ok</span></button>
+			  <button class="slds-button slds-button_brand" ><span>Cancel</span></button>
+			  <button class="slds-button slds-button_brand" ><span>Delete</span></button>
+	    	</div>
+	     </div>
+       </div>
+   </div>
+</section>
+</template>

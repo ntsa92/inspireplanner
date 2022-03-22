@@ -1,0 +1,30 @@
+<template>
+	<section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+		class="slds-modal slds-fade-in-open"> 
+		<div class="slds-modal__container">
+
+			<div class="slds-modal__header">
+				<lightning-button-icon icon-name="utility:close" title="Link" size="x-small"></lightning-button-icon>
+				<h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">SET NEW BASELINE</h1>
+			</div>
+			<div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+				<p>Are you shore you want to set a new baseline ?"All tasks" will overwrite current baseline.</p>
+				<div class="input-zone">
+					<div class="f-radio">
+						<input type="radio" id="radio-79" value="radio-79" name="disabled" />
+						<label class="slds-radio__label" for="radio-79">All Tasks</label>
+					</div>
+					<div class="s-radio">
+						<input type="radio" id="radio-90" value="radio-90" name="disabled" />
+						<label class="slds-radio__label" for="radio-90">New Tasks Only</label>
+					</div>
+				</div>
+			</div>
+			<div class="slds-modal__footer">
+				<button class="slds-button slds-button_brand" aria-label="Ok and close">OK</button>
+				<button class="slds-button slds-button_brand">Cancel</button>
+			</div>
+		</div>
+	</section>
+	<div class="slds-backdrop slds-backdrop_open" role="presentation"></div>      
+</template>

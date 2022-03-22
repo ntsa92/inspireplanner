@@ -1,0 +1,64 @@
+p {
+    font-family: 'Salesforce Sans', Arial, sans-serif;
+    color: rgb(245, 245, 241);
+    text-align: center;
+}
+h1{
+    font-weight: bold;
+    font-size: large;
+    color: rgb(3, 45, 96);   
+}
+.modal_header_x{
+    border-bottom: 3px solid rgb(3, 45, 96);
+}
+.text_style{
+    color:rgb(145, 145, 145);
+}
+table th{
+    color:rgb(145, 145, 145);  
+}
+.add_collaborator_block{
+    display: inline-block;
+}
+.add_collaborator_block span{
+    font-weight:bold;
+    font-size: small;
+    color: rgb(3, 45, 96);
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+button{
+   background-color:rgb(3, 45, 96) ; 
+   font-size: smaller;
+   width: 150px;
+   color:rgb(174, 174, 174);
+}
+lightning-button-icon{
+    float: right;
+}
+.assign_block_header{
+   background-color: rgb(145, 145, 145);
+}
+.assign_task_div{
+   margin-top: 3px;
+   margin-bottom: 10px;
+}
+.assign_task_div button, .div_modal_footer button{
+    margin-left: 15px;
+ }
+.div_above_table{
+    height:80px; 
+    overflow:auto;
+}
+tr td{
+    border-style: none;
+}
+.th_width_x1{
+    width: 150px;
+}
+.th_width_x2{
+    width: 100px;
+}
+/* 1-done */

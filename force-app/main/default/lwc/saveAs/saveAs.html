@@ -1,0 +1,73 @@
+<template>
+  <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+		class="slds-modal slds-fade-in-open">
+		<div class="slds-modal__container corp">
+			<button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse">
+				<svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+				  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+				</svg>
+				<span class="slds-assistive-text">Cancel and close</span>
+			</button>
+
+			<!--<lightning-button-icon style="margin-left:370px; margin-bottom:20px;" icon-name="utility:close" title="Link" size="x-small"></lightning-button-icon>-->	
+			<div class="slds-modal__header tete">
+				<lightning-button-icon onclick={closeSaveAsHandler} icon-name="utility:close" title="Link" size="x-small"></lightning-button-icon>
+				<h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Save As</h1>
+			</div>
+
+			<div class="slds-modal__content slds-p-around_medium modal_content_x" id="modal-content-id-1">
+				<div class="slds-form  ">
+					<div class="slds-form-element slds-form-element_horizontal">
+						<label class="slds-form-element__label" for="horizontal-input-id-01">Name:</label>
+						<div class="slds-form-element__control">
+							<input type="text" id="horizontal-input-id-01" placeholder="Placeholder text…" class="slds-input" />
+						</div>
+					</div>
+					<div class="slds-form-element slds-form-element_horizontal">
+						<label class="slds-form-element__label" for="horizontal-input-id-02">Description:</label>
+						<div class="slds-form-element__control">
+							<textarea id="horizontal-input-id-02" placeholder="Placeholder text…" class="slds-textarea"></textarea>
+						</div>
+					</div>
+					<div class="slds-form-element">
+						<label class="slds-form-element__label" for="checkbox-unique-id-118">Include Task Assigment:</label>
+						<div class="slds-form-element__control check">
+							<span class="slds-checkbox slds-checkbox_standalone">
+								<input type="checkbox" id="checkbox-unique-id-118" name="label" value="option" />
+								<span class="slds-checkbox_faux checkbox_faux_x"></span>
+							</span>
+						</div>
+					</div>
+					<div class="slds-form-element">
+						<label class="slds-form-element__label" for="checkbox-unique-id-119">Include Attachments:</label>
+						<div class="slds-form-element__control check">
+							<span class="slds-checkbox slds-checkbox_standalone">						
+								<input type="checkbox" id="checkbox-unique-id-119" name="label" value="option" />
+								<span class="slds-checkbox_faux checkbox_faux_x"></span>
+							</span>
+						</div>
+					</div>
+					<div class="slds-form-element">
+						<label class="slds-form-element__label aligne" for="" id="">Default Task:</label>
+						<div class="slds-form-element__control aligne combo_box_x">
+							<lightning-combobox
+							name="progress"
+							label=""
+							value={value}
+							placeholder=" "
+							options={options}
+							onchange={handleChange} >
+						</lightning-combobox>
+						</div>
+					</div>
+				</div>
+		
+			<div class="slds-align_absolute-center div_modal_footer">
+				<button class="slds-button slds-button_neutral endbutton " aria-label="Cancel and close">Save As</button>
+				<button class="slds-button slds-button_neutral endbutton"  onclick={closeSaveAsHandler}>Cancel</button>
+			</div>
+		   </div>				
+		</div>			
+	</section>
+	<div class="slds-backdrop slds-backdrop_open" role="presentation"></div>  
+</template>  

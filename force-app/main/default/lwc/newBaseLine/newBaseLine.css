@@ -1,0 +1,49 @@
+
+h1 {
+    color: rgb(0, 112, 210);
+}
+p {
+    font-family: 'Salesforce Sans', Arial, sans-serif;
+    color: rgb(62, 62, 60);
+}
+.app {
+    background-color: #fafaf9;
+    height: 100vh;
+    overflow: scroll;
+}
+lightning-button-icon{
+    float: right;
+}
+.slds-hyphenate {
+    font-weight: bold;
+    color: black;
+}
+.slds-modal__footer{text-align: center;}
+
+.input-zone {
+    padding-top: 10px;
+    display: flex;
+}
+
+.f-radio {
+    padding-right: 60px;
+}
+.close{
+    position: absolute;
+    float: right;
+    border: 1px solid black;
+    margin-left: 90%;
+}
+.slds-modal__header{
+    display: inline-block;
+}
+
+.f-radio, .s-radio {
+    display: flex;
+    align-items: center;
+    height: 25px;
+}
+
+label {
+    padding-left: 5px;
+}

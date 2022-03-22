@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Complete__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( AND( Total_Tasks__c  &gt; 0, OR( Duration_Complete_Day_Unit_Tasks__c  &gt; 0,  Duration_Complete_Hour_Unit_Tasks__c  &gt; 0)),
+
+(
+
+IF(
+
+ISNULL( Total_Hours__c ),
+
+((  Duration_Complete_Day_Unit_Tasks__c  + (  Duration_Complete_Hour_Unit_Tasks__c  / 8)) /
+(  Total_Duration_in_Days__c  + (  Total_Duration_Hour_Unit_Tasks__c  / 8 ))),
+
+
+((  Duration_Complete_Day_Unit_Tasks__c  + (  Duration_Complete_Hour_Unit_Tasks__c  /  Total_Hours__c  )) /
+(  Total_Duration_in_Days__c  + (  Total_Duration_Hour_Unit_Tasks__c  /  Total_Hours__c  )))
+
+)),
+
+0
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>% Complete</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

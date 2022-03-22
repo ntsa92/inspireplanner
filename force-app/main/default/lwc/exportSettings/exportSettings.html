@@ -1,0 +1,80 @@
+<template>
+    <template if:true={Open}>
+	<section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+		class="slds-modal slds-fade-in-open">
+		<div class="slds-modal__container">
+			<div class="slds-modal__header">
+				<div class="titre">
+					<h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">EXPORT SETTINGS</h1>
+				</div>
+				<div class="icon">
+					<lightning-button-icon onclick={closeExportSettingHandler} icon-name="utility:close" size="x-small" title="close"></lightning-button-icon>
+				</div>
+			</div>
+			<div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+				<div class="first_input">
+					<div class="select_columns">
+						<p>Select Columns :</p>
+					</div>
+					<div class="statut">
+						<select class="stat">
+  						 <option class="">Statut project</option>
+						</select>
+					</div>
+				</div><br/>
+				<div class="second_input">
+					<div class="select_columns">
+						<p>Paper format :</p>
+					</div>
+					<div class="letter">
+						<select class="lett">
+  						 <option value=un>Letter</option>
+						</select>
+					</div>
+				</div><br/>
+
+				<div class="third_input">
+					<div class="select_columns">
+						<p>Oriantation:</p>
+					</div>
+					<div class="land">
+						<select class="landscape">
+  						 <option value=un>LandScape</option>
+						</select>
+					</div>
+				</div><br/>
+				<div class="four_input">
+					<div class="select_columns">
+						<p>Show header:</p>
+					</div>
+					<div class="check">
+						<input type="checkbox"/>
+					</div>
+				</div><br/>
+				<div class="four_input">
+					<div class="select_columns">
+						<p>Include Visible Rows Only:</p>
+					</div>
+					<div class="Includ">
+						<input  class="check1" type="checkbox"/>
+					</div>
+				</div><br/>
+				<div class="four_input">
+					<div class="select_columns">
+						<p>Gantt width,%: </p>
+					</div>
+					<div class="gantt">
+						<input  class="gantt" type="number"/>
+					</div>
+				</div>
+
+			</div>
+			<div class="slds-modal__footer">
+				<button class="slds-button slds-button_brand endbutton" onclick={print}>Export</button>
+				<button class="slds-button slds-button_brand endbutton" onclick={closeExportSettingHandler}>Cancel</button>
+			</div>
+		</div>
+	</section>
+	<div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+    </template>
+</template>

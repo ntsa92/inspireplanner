@@ -1,0 +1,57 @@
+h1 {
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    color: rgb(3, 45, 96);     
+}
+.modal_header_x{
+    border-bottom: 3px solid rgb(3, 45, 96);
+}
+button{
+    background-color:rgb(3, 45, 96) ; 
+    font-size: smaller;
+    width: 100px;
+    color:rgb(174, 174, 174);
+ }
+.share_label{
+    width: 210px;
+   /* background-color: rgb(192, 192, 206);*/
+    display: inline-block;
+}
+.form_element_x{
+   /*display:inline-block;*/
+  /* background-color: rgb(111, 126, 27);*/
+   margin-bottom: 20px;
+}
+.form_element_control_block{
+   /* background-color: brown;*/
+    display: inline-block;
+}
+.text_erea_outer_label{
+    width: 210px;
+  /* background-color: rgb(192, 192, 206);*/
+   float:left;
+   margin-top: 20px;
+   /* display: inline-block;*/
+}
+.form_element_text_erea_control_block, .form_element_input_control_block{
+   /* background-color: brown;*/
+   display: inline-block;
+   width: 300px;
+}
+.form_element_control_item{
+    width: 300px;
+    display: inline-block;
+    margin-right: 5px;
+}
+.form_element_control_radio_item{
+    display: inline-block;
+    margin-right: 25px;
+}
+.slds-modal__header lightning-button-icon{
+    float: right;
+}
+
+.modal_footer_x{
+    background-color: white;
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Actual_Effort__c</fullName>
+    <externalId>false</externalId>
+    <label>Total Actual Effort</label>
+    <summarizedField>Project_Task__c.Actuel_Effort__c</summarizedField>
+    <summaryFilterItems>
+        <field>Project_Task__c.Task_Type__c</field>
+        <operation>equals</operation>
+        <value>Task</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Project_Task__c.Project__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,36 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card>
+        <div slot="title" class="card-title">
+            {accountName}
+        </div>
+        <div slot="actions">
+            <lightning-icon class="actions-icon kanban-icon" onclick={addNewTask} icon-name="utility:kanban" variant="container" size="x-small"  title="Kanban view"></lightning-icon>
+            <lightning-icon class="actions-icon back-icon" onclick={deleteTask} icon-name="utility:back" variant="container" size="x-small" title="Move to preview timespan"></lightning-icon>
+            <lightning-icon class="actions-icon forward-icon" icon-name="utility:forward" variant="container" size="x-small" title="Move to next timespan"></lightning-icon>
+            <lightning-icon class="actions-icon zoomin-icon" icon-name="utility:zoomin" variant="container" size="x-small" title="Zoom out on timeline"></lightning-icon>
+            <lightning-icon class="actions-icon zoomout-icon" icon-name="utility:zoomout" variant="container" size="x-small" title="Zoom in on timeline"></lightning-icon>
+            <lightning-icon class="actions-icon move-icon" icon-name="utility:move" variant="container" size="x-small" title="Zoom to full timeline"></lightning-icon>
+            <lightning-icon class="actions-icon event-icon" icon-name="utility:event" variant="container" size="x-small" title="Show calendar"></lightning-icon>
+            <lightning-icon class="actions-icon settings-icon" icon-name="utility:settings" variant="container" size="x-small" title="Define start and end of workday"></lightning-icon>
+            <lightning-icon class="actions-icon deprecate-icon" icon-name="utility:deprecate" variant="container" size="x-small" title="Display Gantt Chart"></lightning-icon>
+        </div>
+        <div class="divider"></div>
+        <div class="custom-datatable">
+            <c-custom-data-table
+                class="slds-table_striped"
+                key-field="id"
+                onpicklistchanged={picklistChanged}
+                data={datas}
+                columns={columns}
+                row-number-offset={rowOffset}
+                enable-infinite-loading
+                ondblclick={startEditMode}
+                suppress-bottom-bar
+                onsave={handleSave}
+                oncellchange={handleChange}
+                show-row-number-column>
+            </c-custom-data-table>
+        </div>
+    </lightning-card>
+</template>

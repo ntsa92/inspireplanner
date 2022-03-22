@@ -1,0 +1,32 @@
+.icon_menu{
+  background-color: white;
+}
+.icon_menu_left_div_block{
+  padding: 0px 0px 0px 8px;
+}
+.icon_menu_right_div_block{
+  padding: 0px 8px 0px 0px;
+}
+ul li a.anchor{
+  display: block;
+  padding: 8px 10px 8px 10px ;
+}
+ul li a.anchor:hover{
+  background-color: rgb(240, 239, 239);
+}
+a.anchor span {
+  display: none
+}
+a.anchor:hover span {
+  padding: 5px 5px 5px 5px;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  background: #6b6868;
+  color:rgb(236, 235, 235);
+  font-weight: 90;
+  margin: 23px;
+  text-decoration: none
+}
+
+

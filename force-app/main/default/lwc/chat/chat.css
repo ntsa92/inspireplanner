@@ -1,0 +1,177 @@
+.start{
+    font-weight: bold;
+    color:rgb(9, 18, 43) ;
+    display: inline-block;
+}
+
+.icons{
+    display: flex;
+    padding-left: 25px;
+}
+
+.icons lightning-icon{
+    padding-right: 5px;
+}
+
+.group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    width: 82%;
+    margin: auto;
+    height: 250px;
+}
+
+.second-group {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    /* width: 82%; */
+    /* margin: auto; */
+}
+
+.text {
+    font-size: 12px;
+    line-height: 14px;
+}
+.text strong, .espace  span {
+    color: #456696;
+}
+
+.post, .file, .link, .poll {
+    padding-right: 20px;
+    font-weight: bold;
+    
+}
+/* 1-done  .slds-modal__container -->  nulified */
+/*.slds-modal__container {
+    height: 600px;
+    width: 700px;
+}*/
+/* 1-done */
+
+/* 2-done  .slds-modal__header -->  .modal_header_x */
+.modal_header_x{
+    border-bottom: 2px solid rgb(9, 18, 43);
+}
+
+.modal_header_x lightning-button-icon{
+    float: right;
+}
+/* 2-done  */
+/* 3-done  .slds-form-element__control -->  .form_element_control_x  */
+.form-element_control_x{
+    margin-top: 5px;
+    margin-left: 25px;
+    width: 78%;
+    display: inline-block;
+    margin-right: 20px;
+    
+}
+/* 3-done  */
+/* 4-done  .slds-button .slds-button_success -->  nulified (converted into comment) */
+/*.slds-button .slds-button_success{
+    border-radius: 1px;
+    display: inline-block;
+    position: relative;
+    margin-left: 50px;
+    font-weight: bold;
+    color: white; 
+}*/
+/* 4-done  */
+button{
+    font-weight: bold;
+    color: white; 
+}
+
+.recherche{
+    display: inline-block;
+    /* margin-left: 15%; */
+    /* margin-top: 20px; */
+}
+
+/*.avatar{
+    /* margin-left: 15%; */
+    /* margin-top: 20px; 
+}
+*/
+
+select{
+    -webkit-appearance: none;
+   /* -moz-animation: none;*/
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0! important;
+    background-image:  none;
+    margin-left: 10px;
+    margin-top: -5px;
+    border-left: 1px solid black;
+    background-color: white;
+    
+    
+}
+
+select::-ms-expand{
+    display: none;
+}
+
+.select{
+    position: relative;
+    display: inline-block;
+    width: 155px;
+    height: 25px;
+    line-height: 2em;
+    margin-left: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-left: 1px solid grey;
+    
+    padding: none;
+    color: grey;
+
+}
+
+.select::after{
+    content: '\25BC';
+    position: absolute;
+    top: 0px;
+    right: -5px;
+    padding: 3 3em;
+    cursor: pointer;
+    pointer-events: none;
+    transition: 25s all ease;
+    
+
+}
+
+.select:hover::after{
+    color: white;
+}
+
+p{
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.up{
+    font-weight: bold;
+}
+
+.slds-button_success{
+    background-color: #8FAB46;
+    margin-top: -2px;
+
+}
+.espace  span {
+    margin-left: 8px;
+}
+
+.espace em {
+    margin-left: 8px;
+    color: grey;
+}

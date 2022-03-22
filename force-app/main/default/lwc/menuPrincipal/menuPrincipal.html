@@ -1,0 +1,169 @@
+<template>
+      <div class="slds-grid slds-wrap icon_menu" >
+         <div class="slds-col icon_menu_left_div_block">
+             <ul class="left_vertical_navigation_section slds-col">
+                     <li>
+                      <a href="#" class="anchor">
+                          <span>Skip back</span>
+                          <lightning-icon icon-name="utility:skip_back" size="xx-small"></lightning-icon>
+                      </a>   
+                     </li>   
+                     <li>
+                       <a href="#" class="anchor">
+                        <span>View project detail</span>
+                         <lightning-icon icon-name="utility:home" size="xx-small"></lightning-icon>                      
+                        </a>
+                     </li>
+                     <li>
+                       <a href="#" class="anchor"> 
+                         <span>Save project plan</span>
+                         <lightning-icon icon-name="utility:save" size="xx-small"></lightning-icon>
+                       </a>                      
+                     </li>               
+                     <li>
+                        <a href="#" class="anchor" onclick={tableToExcel}> 
+                          <span>Export to Excel</span>
+                          <lightning-icon icon-name="utility:cancel_file_request" size="xx-small"></lightning-icon>
+                        </a>                        
+                     </li>
+                     <li>
+                        <a href="#" class="anchor"> 
+                          <span>View all project attachments</span>
+                          <lightning-icon icon-name="utility:opened_folder" size="xx-small"></lightning-icon>
+                        </a>                         
+                     </li>
+                     <li>
+                        <a href="#" class="anchor"> 
+                          <span>Outdent selected tasks</span>
+                          <lightning-icon icon-name="utility:richtextoutdent" size="xx-small"></lightning-icon>
+                        </a>                                       
+                     </li>
+                     <li>
+                        <a href="#" class="anchor"> 
+                          <span>Collapse all tasks</span>
+                          <lightning-icon icon-name="utility:jump_to_top" size="xx-small"></lightning-icon>
+                        </a>                         
+                     </li>             
+                     <li>
+                        <a href="#" class="anchor"> 
+                          <span>Insert new task</span>
+                          <lightning-icon icon-name="utility:add" size="xx-small"></lightning-icon>
+                        </a>                         
+                     </li>
+                     <li>
+                      <a href="#" class="anchor"> 
+                        <span>Hide task list</span>
+                        <lightning-icon icon-name="utility:password" size="xx-small"></lightning-icon>
+                      </a>                       
+                     </li>                  
+                     <li>
+                       <a href="#" class="anchor"> 
+                        <span>Add project collaborator</span>
+                         <lightning-icon icon-name="utility:groups" size="xx-small"></lightning-icon>
+                       </a>                       
+                     </li>
+                     <li>
+                       <a href="#" class="anchor"> 
+                        <span>Set new baseline</span>
+                        <lightning-icon icon-name="utility:checkin" size="xx-small"></lightning-icon>
+                       </a>                       
+                     </li>                
+                     <li>
+                       <a href="#" class="anchor"> 
+                        <span>Resource allocation</span>
+                         <lightning-icon icon-name="utility:resource_capacity" size="xx-small"></lightning-icon>
+                       </a>                       
+                      </li>
+                    </ul>
+      </div>
+        <div class="slds-col icon_menu_right_div_block">
+               <ul>
+                    <li>
+                      <a href="#" class="anchor">
+                        <span>Skip forward</span>
+                        <lightning-icon icon-name="utility:skip_forward" size="xx-small"></lightning-icon>  
+                      </a>                     
+                    </li>
+                    <li>
+                      <a href="#" class="anchor"> 
+                        <span>Chatter discussion for project</span>
+                        <lightning-icon icon-name="utility:comments" size="xx-small"></lightning-icon>
+                      </a>                       
+                    </li>
+
+                    <li>
+                      <a href="#" onclick={revealSaveAsHandler} class="anchor"> 
+                        <span>Save As</span>
+                        <lightning-icon icon-name="utility:copy" size="xx-small"></lightning-icon>
+                      </a> 
+                      <template if:true={revealSaveAs}>
+                        <c-save-as onkillsaveas={killSaveAsHandler} ></c-save-as>
+                      </template>                                               
+                    </li>
+                    
+                    <li>
+                      <a href="#" class="anchor" onclick={revealexportSettingsHandler}> 
+                        <span>Print project plan</span>
+                        <lightning-icon icon-name="utility:print" size="xx-small"></lightning-icon>
+                      </a>   
+                            <template if:true={revealExportSettings}>
+                              <c-export-settings onkillexportsettings={killExportSettingsHandler}></c-export-settings>
+                            </template>                     
+                    </li>
+                    <li>
+                      <a href="#" onclick={listAllSalesforceTaskHandler} class="anchor"> 
+                        <span>List all Salesforce tasks</span>
+                        <lightning-icon icon-name="utility:picklist_type" size="xx-small"></lightning-icon>
+                      </a>    
+                      <template if:true={chatIsVisible}>
+                        <c-chat></c-chat>
+                      </template>                   
+                    </li>    
+                     <li> 
+                      <a href="#" class="anchor"> 
+                        <span>Indent selected tasks</span>
+                        <lightning-icon icon-name="utility:richtextindent" size="xx-small"></lightning-icon>
+                      </a>                                   
+                    </li>           
+                    <li>
+                      <a href="#" class="anchor"> 
+                        <span>Expand all tasks</span>
+                        <lightning-icon icon-name="utility:jump_to_bottom" size="xx-small"></lightning-icon>
+                      </a>                       
+                    </li> 
+                  <li>
+                      <a href="#" class="anchor"> 
+                        <span>Delete selected task</span>
+                        <lightning-icon icon-name="utility:close" size="xx-small"></lightning-icon>
+                      </a>                       
+                  </li>
+                  <li>
+                      <a href="#" class="anchor"> 
+                        <span>desktop</span>
+                        <lightning-icon icon-name="utility:desktop" size="xx-small"></lightning-icon>
+                      </a>                       
+                  </li> 
+
+                  <li>
+                      <a href="#" class="anchor"> 
+                        <span>Display project tritical path</span>
+                        <lightning-icon icon-name="utility:connected_apps" size="xx-small"></lightning-icon>
+                      </a>                       
+                  </li>                                     
+                   <li>
+                      <a href="#" class="anchor"> 
+                        <span>Show baseline task bars</span>
+                        <lightning-icon icon-name="utility:list" size="xx-small"></lightning-icon>
+                      </a>                       
+                  </li>                                
+                  <li>
+                      <a href="#" class="anchor"> 
+                        <span>Reset View</span>
+                        <lightning-icon icon-name="standard:dashboard" size="xx-small"></lightning-icon>
+                      </a>                       
+                  </li>
+
+              </ul>
+        </div> 
+      </div>           
+</template>

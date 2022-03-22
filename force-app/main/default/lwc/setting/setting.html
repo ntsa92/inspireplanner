@@ -1,0 +1,69 @@
+<template>
+  <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open"
+  aria-labelledby="modal-heading-01" aria-modal="true">
+  <div class="slds-modal__container div_container">
+         <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse">
+            <svg class="slds-button_icon slds-button_icon_large" aria-hidden="true">
+               <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+            </svg>
+            <span class="slds-assistive-text">Cancel and close</span>
+          </button>
+<!-- 1-done -->
+    <div class="slds-modal__header modal_header_x">
+      <lightning-button-icon icon-name="utility:close" title="Link" size="x-small"></lightning-button-icon>
+      <h1 id="modal-heading-01">SETTING</h1>
+    </div>
+    <div class="slds-modal__content slds-p-around_medium " id="modal-content-id-1">
+      <div class="form">
+        <div class="slds-form-element slds-form-element_horizontal">
+          <label class="slds-form-element__label div_field_x3" >Start working day:</label>
+          <div class="slds-form-element__control div_field_x2">
+            <lightning-combobox
+                name="progress"
+                label=""
+                value={value}
+                placeholder="Select Progress"
+                options={options}
+                onchange={handleChange} >
+            </lightning-combobox>
+          </div>
+        </div>         
+        <div class="slds-form-element slds-form-element_horizontal">
+          <label class="slds-form-element__label div_field_x3">End working day:</label>
+          <div class="slds-form-element__control div_field_x2">
+            <lightning-combobox
+                name="progress"
+                label=""
+                value={value}
+                placeholder="Select Progress"
+                options={options}
+                onchange={handleChange} >
+            </lightning-combobox>
+          </div>
+        </div>        
+        <div class="slds-form-element slds-form-element_horizontal div_field" >
+           <label class="slds-form-element__label div_field_x4">Weekend as working day:</label>
+           <div class="slds-form-element__control div_field_x2">
+            <lightning-input type="checkbox" name=" " label=" "
+            onchange={projectChangeName}></lightning-input>            
+          </div>
+          </div>
+        <div  class="slds-form-element slds-form-element_horizontal div_field">
+            <label class="slds-form-element__label div_field_x4" >Send task notification:</label>
+            <div class="slds-form-element__control div_field_x2">
+              <lightning-input type="checkbox" name=" " label=" "
+              onchange={projectChangeName}></lightning-input>              
+            </div>     
+        </div>
+      </div>	
+      <div class="slds-align_absolute-center div_modal_footer">
+        <button class="slds-button slds-button_brand " aria-label="Assign task">Apply</button>
+        <button class="slds-button slds-button_brand">Cancel</button>
+      </div>        			
+    </div>              
+  </div>
+</div>  
+</section>
+<!-- 1-done -->
+<div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+</template>

@@ -1,0 +1,106 @@
+<template>
+	<section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+		class="slds-modal slds-fade-in-open">
+		<div class="slds-modal__container">
+		  <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse">
+            <svg class="slds-button_icon slds-button_icon_large" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+            </svg>
+            <span class="slds-assistive-text">Cancel and close</span>
+          </button>
+		  <div class="slds-modal__header">
+				<lightning-button-icon icon-name="utility:close" title="Link" size="x-small"></lightning-button-icon>
+				<h3 id="modal-heading-01" class="slds-modal__title slds-hyphenate start">SELECT COLLABORATOR
+				</h3>
+		  </div>
+		  <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+				<div class="form">
+					<div class="slds-form-element">
+						<div class="slds-form-element__control">
+							<p>Enter name of user or contact</p>
+							<input type="text" id="text-input-id-5" placeholder="Write something" class="slds-input" />
+						</div>
+						<button class="slds-button slds-button_success">Search</button>
+					</div>
+				</div>
+		  
+		 <div class="div_table">
+			<table aria-multiselectable="true"
+				class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered" role="grid"
+				aria-label="Example advanced table of Opportunities in actionable mode with row selected">
+				<thead>
+					<tr class="slds-line-height_reset">
+						<th class="slds-text-align_right" scope="col">
+								<div class="">
+									<lightning-icon size="xx-small" icon-name="utility:add" alternative-text="Utility image" title="Image">
+									</lightning-icon>
+								</div>
+						</th>
+						<th class="th_width_x1" scope="col">
+								<div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+									<span class="slds-truncate" title="Name">Name</span>
+								</div>
+						</th>
+						<th class="th_width_x1" scope="col">
+								<div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+									<span class="slds-truncate" title="Account Name">Company</span>
+								</div>
+						</th>
+						<th scope="col">
+								<div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+									<span class="slds-truncate" title="Close Date">Email</span>
+								</div>
+						</th>
+						<th class="th_width_x2" scope="col">
+								<div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+									<span class="slds-truncate" title="Stage">City</span>
+								 </div>
+						</th>
+						<th class="th_width_x2" scope="col">
+								<div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+									<span class="slds-truncate" title="Confidence">Type</span>
+								</div>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr aria-selected="false" class="slds-hint-parent">
+						<td class="slds-text-align_right slds-cell_action-mode" role="gridcell">
+							<div class="slds-checkbox">
+								<input type="checkbox" name="options" id="checkbox-01" value="checkbox-01" tabindex="0" aria-labelledby="check-button-label-01 column-group-header" />
+								<label class="slds-checkbox__label" for="checkbox-01" id="check-button-label-01">
+                                  <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
+                                </label>
+							</div>
+						</td>
+						<td class="slds-cell_action-mode" scope="row">
+							<div class="slds-truncate" title="Acme - 1,200 Widgets">
+								Acme type
+							</div>
+						</td>
+						<td class="slds-cell_action-mode" role="gridcell">
+							<div class="slds-truncate" title="Acme"></div>
+						</td>
+						<td class="slds-cell_action-mode" role="gridcell">
+							<div class="slds-truncate" title="4/10/15">karen.kakaroukas@g...</div>
+						</td>
+						<td class="slds-cell_action-mode" role="gridcell">
+							<div class="slds-truncate" title="Value Proposition"></div>
+						</td>
+						<td class="slds-cell_action-mode" role="gridcell">
+							<div class="slds-truncate" title="Value Proposition">User</div>
+						</td>						
+					</tr>
+				</tbody>
+			</table>
+		  </div>			
+			<div class="slds-align_absolute-center">
+				<button class="slds-button slds-button_brand endbutton" aria-label="Cancel and close">Select</button>
+				<button class="slds-button slds-button_brand endbutton">Close</button>
+			</div>
+		  </div>
+		</div>
+	</section>
+	<div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+</template>

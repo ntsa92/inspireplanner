@@ -1,0 +1,38 @@
+h1{
+   font-weight: bold;
+   font-size: large;
+   color: rgb(3, 45, 96);   
+}
+.modal_header_x{
+  border-bottom: 3px solid rgb(3, 45, 96);
+}
+.modal_content_x{
+   padding-top: 0px;
+   padding-bottom: 0px;
+   padding-left: 0px;
+   padding-right: 0px;
+}
+lightning-button-icon{
+   float: right;
+}
+.text_style{
+   color:rgb(145, 145, 145);
+}
+.div_top{
+   /*background-color: aquamarine;*/
+
+
+   height: 50px;
+}
+.div_left{
+   /*background-color: blanchedalmond;*/
+   /*height: 300px;*/
+   margin-top: 35px;
+   border-left: 2px solid rgb(229, 229, 229);
+}
+.div_right{
+  /*background-color: blueviolet;*/
+   height: 300px;
+   border-left: 2px solid rgb(145, 145, 145);  
+   margin-left: 1px; 
+}

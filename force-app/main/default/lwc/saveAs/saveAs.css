@@ -1,0 +1,48 @@
+.tete h1{
+    color: rgb(26, 47, 90);
+    font-weight: bold;
+    font-size: large;
+    display: inline-block;
+}
+.tete {
+    float: right;
+    border-bottom: 2px solid rgb(26, 47, 90);
+}
+.tete lightning-button-icon{
+    float:right;
+} 
+.corp{
+  width: 390px;
+}
+.checkbox_faux_x{
+    display: inline-block;
+}
+.modal_content_x{
+    overflow:hidden;
+}
+.combo_box_x{
+    margin-left:43px;
+}
+.check{
+    display: inline-block;
+    margin-left: 9px;
+    margin-bottom: 7px;
+}
+.end{
+    text-align: center;
+}
+.endbutton{
+    background-color:rgb(26, 47, 90);
+    color: white;
+}
+.aligne{
+    display: inline-block;
+}
+.combo{
+    display: inline-block;
+    margin-left: 8px;
+    width:20%;
+}
+.div_modal_footer{
+    margin-top: 50px;
+}

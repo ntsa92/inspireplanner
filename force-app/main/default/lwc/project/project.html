@@ -1,0 +1,249 @@
+<template>
+    <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_large"
+    aria-labelledby="modal-heading-01" aria-modal="true">
+    <div class="slds-modal__container">
+        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse">
+<svg class="slds-button_icon slds-button_icon_large" aria-hidden="true">
+<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+</svg>
+<span class="slds-assistive-text">Cancel and close</span>
+</button>
+        <div class="slds-modal__header">
+            <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">New Project</h1>
+        </div>
+        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+            
+
+             <div class="slds-grid ">
+        <div class="slds-col slds-size_6-of-12 slds-p-horizontal_medium">
+            <lightning-input type="text" name="ProjetName" label="Projet Name" onchange={handleNameChange}></lightning-input>
+        </div>
+        <div class="slds-col slds-size_6-of-12 slds-p-horizontal_medium">
+            <lightning-combobox name="projectHealth" label="Overall Project Health" onchange={handleProjectHealth}
+            options={controllingValues} placeholder="Green" value={selectedProjectHealth}></lightning-combobox>
+        </div>
+    </div>
+
+     <div class="slds-grid">
+        <div class="slds-col slds-size_6-of-12 slds-var-p-horizontal_medium">
+            <lightning-combobox name="projetStatus" label="Projet Status" onchange={handleProjetStatus}
+            options={picklistStatusValues} placeholder="" value={value}></lightning-combobox>
+        </div>
+         <div class="slds-col slds-size_6-of-12 slds-p-horizontal_medium">
+            <lightning-combobox name="Budget" label="Budget" onchange={handleBudget}
+            options={controllingValuesBudget} placeholder="Green" value={selectedBudget}></lightning-combobox>
+        </div>
+     </div>
+
+      <div class="slds-grid">
+        <div class="slds-col slds-size_6-of-12 slds-p-horizontal_medium">
+            <lightning-combobox name="ParentProject" label="Parent Project" onchange={handleParentProject}
+            options={controllingValuesParentProject} placeholder="Search Projects..." value={selectedProjectStatus}></lightning-combobox>
+        </div>
+         <div class="slds-col slds-size_6-of-12 slds-p-horizontal_medium">
+            <lightning-combobox name="Schedule" label="Schedule" onchange={handleSchedule}
+            options={controllingValuesSchedule} placeholder="Green" value={selectedSchedule}>
+            </lightning-combobox>
+        </div>
+     </div>
+
+      <div class="slds-grid">
+        <div class="slds-col slds-size_6-of-12 slds-p-horizontal_medium">
+            <lightning-combobox name="SchedulingMode" label="Scheduling Mode" onchange={handleSchedulingMode}
+            options={controllingValuesSchedulingMode} placeholder="Manual" value={selectedSchedulingMode}></lightning-combobox>
+        </div>
+         <div class="slds-col slds-size_6-of-12 slds-p-horizontal_medium">
+            <lightning-combobox name="Resources" label="Resources" onchange={handleResources}
+            options={controllingValuesResources} placeholder="Green" value={selectedResources}>
+            </lightning-combobox>
+        </div>
+     </div>
+
+      <div class="slds-grid">
+        <div class="slds-col slds-size_6-of-12 slds-size_6-of-12 slds-p-horizontal_medium">
+           
+        </div>
+         <div class="slds-col slds-size_6-of-12 slds-p-horizontal_medium">
+            <lightning-combobox name="Scope" label="Scope" onchange={handleScope}
+            options={controllingValuesScope} placeholder="Green" value={selectedScope}>
+            </lightning-combobox>
+        </div>
+     </div>
+
+      <div class="slds-grid">
+        <div class="slds-col slds-size_6-of-12 slds-p-horizontal_medium">
+            <lightning-input type="checkbox" name="IsTemplate" label="Is Template" onchange={projectChangeName}></lightning-input>
+        </div>
+         <div class="slds-col slds-size_6-of-12 slds-p-horizontal_medium">
+            <lightning-combobox name="Risks" label="Risks" onchange={handleRisks}
+            options={controllingValuesRisks} placeholder="Green" value={selectedRisks}>
+            </lightning-combobox>
+        </div>
+     </div>
+
+      <div class="slds-grid">
+        <div class="slds-col slds-size_6-of-12 slds-p-horizontal_medium">
+           
+        </div>
+         <div class="slds-col slds-size_6-of-12 slds-p-horizontal_medium">
+            <lightning-combobox name="Issues" label="Issues" onchange={handleIssues}
+            options={controllingValuesIssues} placeholder="Green" value={selectedIssues}>
+            </lightning-combobox>
+        </div>
+     </div>
+
+      <div class="slds-grid">
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal_medium">
+                <lightning-combobox name="ProjectTemplate" label="Project Template" onchange={handleProjectTemplate}
+                options={controllingValuesProjectTemplate} placeholder="Search Projects..." value={selectedProjectTemplate}>
+                </lightning-combobox>
+            </div>
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal_medium">
+            
+            </div>
+     </div>
+
+     <div class="slds-grid">
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal_medium">
+                <lightning-combobox name="Account" label="Account" onchange={handleAccount}
+                options={controllingValuesAccount} placeholder="Search Accounts..." value={selectedAccount}>
+                </lightning-combobox>
+            </div>
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal_medium">
+            
+            </div>
+     </div>
+
+     <div class="slds-grid">
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal_medium">
+                <lightning-combobox name="Opportunity" label="Opportunity" onchange={handleOpportunity}
+                options={controllingValuesOpportunity} placeholder="Search Opportunities..." value={selectedOpportunity}>
+                </lightning-combobox>
+            </div>
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal_medium">
+            
+            </div>
+     </div>
+
+     <div class="slds-grid slds-p-vertical_large slds-p-around_medium">
+        <div class="slds-col ">
+           
+        </div>
+         <div class="slds-col">
+             <lightning-textarea  name="Description" label="Description" onchange={descriptionChangeName}></lightning-textarea>
+        </div>
+     </div>
+
+    <div class="slds-m-top_medium slds-m-bottom_x-large">
+        <div class="slds-p-around_medium slds-p-horizontal_medium lgc-bg">
+            <lightning-tile label="" class="espace">
+                <p class="slds-truncate" title="Project Budget Summary">Project Budget Summary</p>
+            </lightning-tile>
+        </div>
+    </div>
+
+     <div class="slds-grid slds-p-vertical_large slds-p-around_medium">
+          <div class="slds-col slds-size_6-of-12">
+             <lightning-input type="text" name="PlannedValue" label="Planned Value" onchange={PlannedValueChangeName}></lightning-input>
+        </div>
+        <div class="slds-col slds-size_6-of-12 ">
+           
+        </div>
+        
+     </div>
+
+      <div class="slds-m-top_medium slds-m-bottom_x-large">
+        <div class="slds-p-around_medium slds-p-horizontal_medium lgc-bg">
+            <lightning-tile label="" class="espace">
+                <p class="slds-truncate" title="Project Dates">Project Dates</p>
+            </lightning-tile>
+        </div>
+    </div>
+
+     <div class="slds-grid">
+        <div class="slds-col slds-size_6-of-12 slds-p-horizontal_medium">
+           
+        </div>
+         <div class="slds-col slds-size_6-of-12 slds-p-horizontal_medium">
+           <lightning-input type="date" label="Baseline Start Date" name="Baseline Start Date"></lightning-input>
+
+        </div>
+     </div>
+     <div class="slds-grid">
+        <div class="slds-col slds-size_6-of-12 slds-p-horizontal_medium">
+           
+        </div>
+         <div class="slds-col slds-size_6-of-12 slds-p-horizontal_medium">
+           <lightning-input type="date" label="Baseline Finish Date" name="Baseline Finish Date"></lightning-input>
+        </div>
+     </div>
+
+      <div class="slds-m-top_large slds-m-bottom_x-large">
+        <div class="slds-p-around_medium slds-p-horizontal_medium lgc-bg">
+            <lightning-tile label="" class="espace">
+                <p class="slds-truncate" title="System Information">System Information</p>
+            </lightning-tile>
+        </div>
+    </div>
+
+    <div class="slds-grid">
+        <div class="slds-col slds-size_6-of-12 slds-p-horizontal_medium">
+            <lightning-combobox name="TimeZone" label="Time Zone" onchange={handleTimeZone}
+            options={controllingValuesTimeZone} placeholder="-Aucun-" value={selectedTimeZone}></lightning-combobox>
+        </div>
+         <div class="slds-col slds-size_6-of-12 slds-p-horizontal_medium">
+             <div>
+                 <label for="name" >Owner</label>
+           <p class="slds-m-top_small"> <span>Nom du User</span> </p>
+             </div>
+            
+        </div>
+     </div>
+
+      <div class="slds-grid">
+        <div class="slds-col slds-size_6-of-12 slds-p-horizontal_medium slds-m-top_large">
+            <lightning-input type="checkbox" name="BatchCreateProcess" label="Use Batch Create Process" onchange={BatchCreateProcessChangeName}></lightning-input>
+        </div>
+         <div class="slds-col slds-size_6-of-12 slds-p-horizontal_medium">
+            <lightning-input type="text" label="Last User Update" name="Last User Update"></lightning-input>
+        </div>
+     </div>
+
+      <div class="slds-grid">
+        <div class="slds-col slds-size_6-of-12 slds-p-horizontal_medium">
+           
+        </div>
+         <div class="slds-col slds-size_6-of-12 slds-p-horizontal_medium">
+                <div class="slds-grid">
+
+                    <div class="slds-col  slds-m-top_large">
+                        <lightning-input type="datetime" label="Last User Update Time" name="Last User Update Time"></lightning-input>
+                    </div>
+                </div>
+         </div>
+     </div>
+                
+</div>
+        
+        
+        <div class="slds-modal__footer">
+            <div class="slds-align_absolute-center">
+                <button class="slds-button slds-button_neutral" aria-label="Cancel and close">Cancel</button>
+                <button class="slds-button slds-button_neutral" aria-label="Save and New">Save and New</button>
+                <button class="slds-button slds-button_brand" onclick={saveRecord}>Save</button>
+            </div> 
+        </div>
+
+        <!-- <div class="slds-p-top_medium">
+            <div class="modal-footer slds-modal__footer slds-size_1-of-1">
+                <div class="forceChangeRecordTypeFooter">
+                    <lightning-button variant="brand" label="Save" onclick={saveRecord}></lightning-button>
+                </div>
+            </div>
+        </div> -->
+
+
+    </div>
+</section>
+<div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+</template>

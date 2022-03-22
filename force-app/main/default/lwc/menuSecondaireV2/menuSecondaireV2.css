@@ -1,0 +1,36 @@
+.div_ancestor{
+   background-color: white;
+   height: 55px;
+   border-left: 0px;
+   border-right: 0pt;
+}
+.divContainer {
+    height: 50px;
+}
+.divLabel{
+   float: left;
+}
+.divLabel label{
+   font-weight: bold;
+   padding-right: 1px;
+}
+.divLabel span{
+   font-style: italic;
+   color: red;
+   padding-left: 4px;
+}
+
+.divButton{
+  border: 1px soild green;
+  float: right;
+}
+.divButton div{
+   display: inline-block;
+}
+a{
+   display: block;
+   padding: 8px 10px 8px 10px ;
+ }
+ a:hover{
+   background-color: rgb(240, 239, 239);
+}

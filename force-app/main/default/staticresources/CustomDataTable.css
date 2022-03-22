@@ -1,0 +1,45 @@
+.picklist-container,
+.lookup-container{
+    width : 100%;
+}
+
+.picklist-container .slds-dropdown,
+.lookup-container .slds-dropdown{
+    position: relative !important;
+    z-index: 99 !important;
+    max-height: 120px;
+    overflow: scroll;
+}
+
+[lightning-combobox_combobox-host]{
+    margin-top: -20px;
+}
+
+th.slds-has-focus, td.slds-has-focus{
+    box-shadow: none !important;
+}
+
+/* .slds-input_faux {
+    border: none;
+    background-color: transparent;
+} */
+
+.slds-input__icon-group_right {
+    display: none;
+}
+
+.slds-input_faux.slds-is-disabled {
+    background-color: transparent;
+    border-color: none;
+    border: none;
+    cursor: default;
+}
+
+/* .slds-table_edit thead th:first-child{
+    width: 60px;
+} */
+
+.slds-combobox__input.slds-input.slds-combobox__input-value,
+.slds-icon-utility-clock.slds-input__icon.slds-input__icon_right.slds-icon_container {
+    display: none;
+}

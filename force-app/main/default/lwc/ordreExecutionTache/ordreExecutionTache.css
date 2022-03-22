@@ -1,0 +1,60 @@
+h1 {
+    color: rgb(0, 112, 210);
+}
+p {
+    font-family: 'Salesforce Sans', Arial, sans-serif;
+    color: rgb(163, 163, 60);
+}
+.app {
+    background-color: #f5f5ef;
+    border: 2px solid blue;
+    height: 240px;
+    width:380px;
+    padding-left: 7px;
+    padding-right:5px;
+    padding-top: 0px;
+    padding-bottom: -5px;
+    margin: -16px -16px -16px -16px;
+}
+.div_container{
+    height:fit-content; 
+    width:fit-content;
+}
+.badge{
+   padding-left:0px; font-weight:normal;    
+}
+.inlineBlock{
+    display:inline-block;
+    width: 250px;
+    background-color: #f5f5ef;
+}
+.comboBox{
+    margin-bottom:15px;  
+}
+.modal_content_x{
+    overflow:hidden;
+}
+.label{
+   display:inline-block; width:90px; 
+}
+.divContainer{
+   height:40px; 
+}
+.divButton{
+    background-color: #e5e3ec;
+    margin-top:10px;
+    text-align: center;
+    padding-top:7px;
+    padding-bottom:7px;
+    margin-bottom: 0px;
+}
+.divButton span{
+  width:30px;
+  text-align:center;   
+}
+.divButton button{
+  background-color: #6495ED;  
+}
+.comboBoxBorder{
+    border:2px solid Gainsboro;
+}

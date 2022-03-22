@@ -1,0 +1,36 @@
+<template>
+  <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_small"
+  aria-labelledby="modal-heading-01" aria-modal="true">
+  <div class="slds-modal__container">
+        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse">
+            <svg class="slds-button_icon slds-button_icon_large" aria-hidden="true">
+               <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+            </svg>
+            <span class="slds-assistive-text">Cancel and close</span>
+          </button>
+<!-- 1-done -->
+    <div class="slds-modal__header modal_header_x">
+      <lightning-button-icon icon-name="utility:close" title="Link" size="x-small"></lightning-button-icon>
+      <h1 id="modal-heading-01">RESOURCE ALLOCATION</h1>
+    </div>
+    <div class="slds-modal__content slds-p-around_medium modal_content_x" id="modal-content-id-1">
+ 
+      <div class="slds-grid slds-wrap">
+
+        <div class="slds-col slds-size_12-of-12 div_top">
+          <c-resource-allocation-navigation-bar></c-resource-allocation-navigation-bar>
+        </div>
+        <div class="slds-col slds-size_3-of-12 div_left">
+          <c-left_menu></c-left_menu>
+        </div>
+        <div class="slds-col slds-size_8-of-12 div_right">
+
+        </div>   
+     </div>
+
+    </div>
+  </div>
+</section>
+<!-- 1-done -->
+<div class="slds-backdrop slds-backdrop_open" role="presentation"></div> 
+ </template>

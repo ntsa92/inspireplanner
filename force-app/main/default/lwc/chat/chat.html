@@ -1,0 +1,86 @@
+<template>
+	<section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+		class="slds-modal slds-fade-in-open">
+		<div class="slds-modal__container">
+			<button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" onclick={closeHandler}>
+			  <svg class="slds-button_icon slds-button_icon_large" aria-hidden="true">
+			    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use> 
+			  </svg>
+			  <span class="slds-assistive-text">Cancel and close</span>
+			</button>
+			<div class="slds-modal__header modal_header_x">
+				<lightning-button-icon icon-name="utility:close" title="Link" size="x-small"></lightning-button-icon>
+				<h3 id="modal-heading-01" class="slds-modal__title slds-hyphenate start">PREPARE KICK-OFF PRESENTATION</h3>
+			</div>
+			<div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+				<div class="icons">
+					<div class='group'>
+					 <a href="">
+						<lightning-icon icon-name="utility:chat" title="chat" size="x-small"></lightning-icon>
+						<label class="post">Post</label>
+					</a>
+					  </div>
+<!-- 1-done   utility-file added -->					
+					<div class='group'>
+						<a href="">						
+						<lightning-icon icon-name="utility:file" title="file" size="x-small"></lightning-icon>
+							<label class="file">File</label>
+						</a>
+					</div>
+<!-- 1-done -->					
+					<div class='group'>
+						<a href="">					
+						  <lightning-icon icon-name="utility:link" title="Link" size="x-small"></lightning-icon>
+							<label class="link">Link</label>
+						</a>
+					</div>
+<!-- 2-done   utility-metrics added-->
+					<div class='group'>
+					 <a href="">
+						<lightning-icon icon-name="utility:metrics" title="poll" size="x-small"></lightning-icon>
+							<label class="poll">Poll</label>
+					</a>
+					</div>
+<!-- 2-done -->				
+				</div>
+				<div class="form">
+					<div class="slds-form-element">
+						<div class="slds-form-element__control form-element_control_x">
+							<input type="text" id="text-input-id-5" placeholder="Write something" class="slds-input" />
+						</div>
+						<button class="slds-button slds-button_success">Share</button>
+					</div>
+				</div>
+				<div class="footer">
+					<div class="recherche">
+						<lightning-icon icon-name="utility:search" title="search" size="x-small">></lightning-icon>
+						<div class="select">
+							<p>Show</p>
+							<select name="pets" class="up" id="pet-select">
+           		              <option value="">All Updates</option>
+          	                </select>
+						</div>
+					</div>
+					<div class="second-group">
+						<div class="avatar">
+							<lightning-icon icon-name="standard:avatar" alternative-text="avatar" title="avatar" size="large">
+							</lightning-icon>
+						</div>
+						<div>
+							<p class="text"><strong>Kouam Michel</strong> changed % complete from 0% to 10% and Status from Not
+								Started
+								to In
+								Progress</p>
+							<div class="espace">
+								<span>Comment -</span>
+								<span>Like -</span>
+								<em>Today at 12:45 PM</em>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+</template>

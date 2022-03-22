@@ -1,0 +1,419 @@
+<template>
+   <div class="slds-table_edit_container table_uppermost_wrapper_div">
+      <table style="width:110rem;" aria-multiselectable="true" class="slds-table slds-table_bordered slds-table_edit slds-table_fixed-layout slds-table_resizable-cols slds-table_col-bordered slds-table_striped" role="grid" aria-label="Example inline edit table">
+         <thead>
+            <tr class="slds-line-height_reset">
+               <th class="slds-cell_action-mode" scope="col" style="width:2rem">
+                  <div class="slds-truncate slds-assistive-text" title="Errors">Errors</div>
+                  <div class="slds-th__action slds-th__action_form">      
+                     <span title=" ">
+                       <lightning-icon icon-name="utility:number_input" size="xx-small" alternative-text="Indicates approval">
+                       </lightning-icon>
+                     </span>
+                   </div>                  
+               </th>
+                <th class="slds-cell_action-mode utility_icon_th" scope="col" style="width:2rem">
+                   <div class="slds-th__action slds-th__action_form">      
+                     <span class="utility_icon_span">Upload Files</span>
+                       <lightning-icon title="" icon-name="utility:attach" size="xx-small" alternative-text="Indicates approval">
+                       </lightning-icon>
+                   </div>
+                </th>         
+                 <th class="slds-cell_action-mode utility_icon_th" scope="col" style="width:2rem">
+                        <div class="slds-th__action slds-th__action_form">      
+                            <span class="utility_icon_span">Chatter</span>  
+                            <lightning-icon title="" icon-name="utility:comments" size="xx-small" alternative-text="Indicates approval">
+                            </lightning-icon>
+                        </div>
+                 </th> 
+                 <th class="slds-cell_action-mode utility_icon_th" scope="col" style="width:2rem">
+                    <div class="slds-th__action slds-th__action_form">      
+                        <span class="utility_icon_span">Checklist Items</span>
+                        <lightning-icon title="" icon-name="utility:date_input" size="xx-small" alternative-text="Indicates approval">
+                        </lightning-icon>
+                     </div>
+                 </th>                                                                
+                <th aria-label="Name" aria-sort="none" class="slds-has-button-menu slds-is-resizable slds-is-sortable task_subject_th" scope="col">
+                        <div style="padding-left:7px;">
+                          <span class="slds-assistive-text">Sort by: </span>
+                          <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate" >
+                            <span class="slds-truncate table_thead_th_label" title="Name" >Task Subject</span>
+                            <span class="slds-icon_container slds-icon-utility-arrowdown">
+                              <svg class="slds-icon slds-icon-text-default slds-is-sortable__icon " aria-hidden="true">
+                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                              </svg>
+                            </span>
+                          </div>
+                          
+                        <button class="slds-button slds-button_icon slds-th__action-button slds-button_icon-x-small" aria-haspopup="true" tabindex="-1" title="Show Name column actions">
+                          <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_small" aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
+                          </svg>
+                          <span class="slds-assistive-text">Show Name column actions</span>
+                        </button>
+                                               <!--             champ de saisie       -->
+                        <lightning-input type="text" label=" " value=" " class="task_subject_th_lightning_input"></lightning-input>
+                        <div class="slds-resizable">
+                                <input type="range" aria-label="Name column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-582" max="1000" min="20" tabindex="-1" />
+                                <span class="slds-resizable__handle">
+                                  <span class="slds-resizable__divider"></span>
+                                </span>
+                        </div>
+                     </div>  
+                </th>
+                <th aria-label="Name" aria-sort="none" class="slds-has-button-menu slds-is-resizable slds-is-sortable" scope="col">
+                  
+                    <span class="slds-assistive-text">Sort by: </span>
+                    <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                      <span class="slds-truncate table_thead_th_label" title="Name">Status</span>
+                      <span class="slds-icon_container slds-icon-utility-arrowdown">
+                        <svg class="slds-icon slds-icon-text-default slds-is-sortable__icon " aria-hidden="true">
+                          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                        </svg>
+                      </span>
+                    </div>
+                
+                  <button class="slds-button slds-button_icon slds-th__action-button slds-button_icon-x-small" aria-haspopup="true" tabindex="-1" title="Show Name column actions">
+                    <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_small" aria-hidden="true">
+                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Show Name column actions</span>
+                  </button>
+                  <div class="slds-resizable">
+                    <input type="range" aria-label="Name column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-596" max="1000" min="20" tabindex="-1" />
+                    <span class="slds-resizable__handle">
+                      <span class="slds-resizable__divider"></span>
+                    </span>
+                  </div>
+                </th>
+                <th aria-label="Name" aria-sort="none" class="slds-has-button-menu slds-is-resizable slds-is-sortable" scope="col">
+                    <span class="slds-assistive-text">Sort by: </span>
+                    <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                      <span class="slds-truncate" title="Name">Complete</span>
+                      <span class="slds-icon_container slds-icon-utility-arrowdown">
+                        <svg class="slds-icon slds-icon-text-default slds-is-sortable__icon " aria-hidden="true">
+                          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  <button class="slds-button slds-button_icon slds-th__action-button slds-button_icon-x-small" aria-haspopup="true" tabindex="-1" title="Show Name column actions">
+                    <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_small" aria-hidden="true">
+                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Show Name column actions</span>
+                  </button>
+                  <div class="slds-resizable">
+                    <input type="range" aria-label="Name column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-652" max="1000" min="20" tabindex="-1" />
+                    <span class="slds-resizable__handle">
+                      <span class="slds-resizable__divider"></span>
+                    </span>
+                  </div>
+                </th> 
+                <th aria-label="Name" aria-sort="none" class="slds-has-button-menu slds-is-resizable slds-is-sortable" scope="col">
+                  <span class="slds-assistive-text">Sort by: </span>
+                  <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                    <span class="slds-truncate" title="Name">Duration</span>
+                    <span class="slds-icon_container slds-icon-utility-arrowdown">
+                      <svg class="slds-icon slds-icon-text-default slds-is-sortable__icon " aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                      </svg>
+                    </span>
+                  </div>
+                <button class="slds-button slds-button_icon slds-th__action-button slds-button_icon-x-small" aria-haspopup="true" tabindex="-1" title="Show Name column actions">
+                  <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_small" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
+                  </svg>
+                  <span class="slds-assistive-text">Show Name column actions</span>
+                </button>
+                <div class="slds-resizable">
+                  <input type="range" aria-label="Name column width" class="slds-resizable__input slds-assistive-text" id="cell-resizendle-652" max="1000" min="20" tabindex="-1" />
+                  <span class="slds-resizable__handle">
+                    <span class="slds-resizable__divider"></span>
+                  </span>
+                </div>
+              </th>    
+              <th aria-label="Name" aria-sort="none" class="slds-has-button-menu slds-is-resizable slds-is-sortable" scope="col">
+                <span class="slds-assistive-text">Sort by: </span>
+                  <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                    <span class="slds-truncate" title="Name">Start Date</span>
+                    <span class="slds-icon_container slds-icon-utility-arrowdown">
+                      <svg class="slds-icon slds-icon-text-default slds-is-sortable__icon " aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                      </svg>
+                     </span>
+                  </div>
+                  <button class="slds-button slds-button_icon slds-th__action-button slds-button_icon-x-small" aria-haspopup="true" tabindex="-1" title="Show Name column actions">
+                     <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_small" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
+                     </svg>
+                     <span class="slds-assistive-text">Show Name column actions</span>
+                  </button>
+                  <div class="slds-resizable">
+                     <input type="range" aria-label="Name column width" class="slds-resizable__input slds-assistive-text" id="cell-res" max="1000" min="20" tabindex="-1" />
+                     <span class="slds-resizable__handle">
+                         <span class="slds-resizable__divider"></span>
+                     </span>
+                 </div>
+              </th> 
+              <th aria-label="Name" aria-sort="none" class="slds-has-button-menu slds-is-resizable slds-is-sortable" scope="col">
+               <span class="slds-assistive-text">Sort by: </span>
+                 <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                   <span class="slds-truncate" title="Name">Finish Date</span>
+                   <span class="slds-icon_container slds-icon-utility-arrowdown">
+                     <svg class="slds-icon slds-icon-text-default slds-is-sortable__icon " aria-hidden="true">
+                       <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                     </svg>
+                    </span>
+                 </div>
+                 <button class="slds-button slds-button_icon slds-th__action-button slds-button_icon-x-small" aria-haspopup="true" tabindex="-1" title="Show Name column actions">
+                    <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_small" aria-hidden="true">
+                       <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Show Name column actions</span>
+                 </button>
+                 <div class="slds-resizable">
+                    <input type="range" aria-label="Name column width" class="slds-resizable__input slds-assistive-text" id="cell-re" max="1000" min="20" tabindex="-1" />
+                    <span class="slds-resizable__handle">
+                        <span class="slds-resizable__divider"></span>
+                    </span>
+                </div>
+             </th>
+             <th aria-label="Name" aria-sort="none" class="slds-has-button-menu slds-is-resizable slds-is-sortable" scope="col">
+               <span class="slds-assistive-text">Sort by: </span>
+                 <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                   <span class="slds-truncate" title="Name">Assigned To</span>
+                   <span class="slds-icon_container slds-icon-utility-arrowdown">
+                     <svg class="slds-icon slds-icon-text-default slds-is-sortable__icon " aria-hidden="true">
+                       <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                     </svg>
+                    </span>
+                 </div>
+                 <button class="slds-button slds-button_icon slds-th__action-button slds-button_icon-x-small" aria-haspopup="true" tabindex="-1" title="Show Name column actions">
+                    <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_small" aria-hidden="true">
+                       <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Show Name column actions</span>
+                 </button>
+                 <div class="slds-resizable">
+                    <input type="range" aria-label="Name column width" class="slds-resizable__input slds-assistive-text" id="cel-re" max="1000" min="20" tabindex="-1" />
+                    <span class="slds-resizable__handle">
+                        <span class="slds-resizable__divider"></span>
+                    </span>
+                </div>
+             </th> 
+             <th aria-label="Name" aria-sort="none" class="slds-has-button-menu slds-is-resizable slds-is-sortable" scope="col">
+               <span class="slds-assistive-text">Sort by: </span>
+                 <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                   <span class="slds-truncate" title="Name">Predecessors</span>
+                   <span class="slds-icon_container slds-icon-utility-arrowdown">
+                     <svg class="slds-icon slds-icon-text-default slds-is-sortable__icon " aria-hidden="true">
+                       <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                     </svg>
+                    </span>
+                 </div>
+                 <button class="slds-button slds-button_icon slds-th__action-button slds-button_icon-x-small" aria-haspopup="true" tabindex="-1" title="Show Name column actions">
+                    <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_small" aria-hidden="true">
+                       <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Show Name column actions</span>
+                 </button>
+                 <div class="slds-resizable">
+                    <input type="range" aria-label="Name column width" class="slds-resizable__input slds-assistive-text" id="celre" max="1000" min="20" tabindex="-1" />
+                    <span class="slds-resizable__handle">
+                        <span class="slds-resizable__divider"></span>
+                    </span>
+                </div>
+             </th> 
+             <th aria-label="Name" aria-sort="none" class="slds-has-button-menu slds-is-resizable slds-is-sortable" scope="col">
+               <span class="slds-assistive-text">Sort by: </span>
+                 <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                   <span class="slds-truncate" title="Name">Priority</span>
+                   <span class="slds-icon_container slds-icon-utility-arrowdown">
+                     <svg class="slds-icon slds-icon-text-default slds-is-sortable__icon " aria-hidden="true">
+                       <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                     </svg>
+                    </span>
+                 </div>
+                 <button class="slds-button slds-button_icon slds-th__action-button slds-button_icon-x-small" aria-haspopup="true" tabindex="-1" title="Show Name column actions">
+                    <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_small" aria-hidden="true">
+                       <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Show Name column actions</span>
+                 </button>
+                 <div class="slds-resizable">
+                    <input type="range" aria-label="Name column width" class="slds-resizable__input slds-assistive-text" id="cre" max="1000" min="20" tabindex="-1" />
+                    <span class="slds-resizable__handle">
+                        <span class="slds-resizable__divider"></span>
+                    </span>
+                </div>
+             </th> 
+             <th aria-label="Name" aria-sort="none" class="slds-has-button-menu slds-is-resizable slds-is-sortable" scope="col">
+               <span class="slds-assistive-text">Sort by: </span>
+                 <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                   <span class="slds-truncate" title="Name">Notes</span>
+                   <span class="slds-icon_container slds-icon-utility-arrowdown">
+                     <svg class="slds-icon slds-icon-text-default slds-is-sortable__icon " aria-hidden="true">
+                       <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                     </svg>
+                    </span>
+                 </div>
+                 <button class="slds-button slds-button_icon slds-th__action-button slds-button_icon-x-small" aria-haspopup="true" tabindex="-1" title="Show Name column actions">
+                    <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_small" aria-hidden="true">
+                       <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Show Name column actions</span>
+                 </button>
+                 <div class="slds-resizable">
+                    <input type="range" aria-label="Name column width" class="slds-resizable__input slds-assistive-text" id="celre-p" max="1000" min="20" tabindex="-1" />
+                    <span class="slds-resizable__handle">
+                        <span class="slds-resizable__divider"></span>
+                    </span>
+                </div>
+             </th>                                                                                                                  
+           </tr>
+         </thead>
+         <tbody>         
+            <tr aria-selected="false" class="slds-hint-parent">
+               <td class="slds-cell-edit slds-cell-error" role="gridcell">
+                  <button id="error-01" class="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small slds-hidden" aria-hidden="true" tabindex="-1" title="Item 1 has errors">
+                    <svg class="slds-button__icon" aria-hidden="true">
+                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#error"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Item 1 has errors</span>
+                  </button>
+                  <span class="slds-row-number slds-text-body_small slds-text-color_weak"></span>
+                </td>                
+               <td class="slds-cell-edit slds-cell-error slds-cell_action-mode" role="gridcell">
+                  <div class="slds-th__action slds-th__action_form">      
+                     <span title="UploadFiles">
+                       <lightning-icon icon-name="utility:attach" size="xx-small" alternative-text="Indicates approval">
+                       </lightning-icon>
+                     </span>
+                   </div>
+               </td>
+               <td class="slds-cell-edit slds-cell-error slds-cell_action-mode" role="gridcell">
+                  <div class="slds-th__action slds-th__action_form">      
+                     <span title="Checklist_">
+                       <lightning-icon icon-name="utility:comments" size="xx-small" alternative-text="Indicates approval">
+                       </lightning-icon>
+                     </span>
+                   </div>
+                </td>
+                <td class="slds-cell-edit slds-cell-error slds-cell_action-mode" role="gridcell">
+                  <div class="slds-th__action slds-th__action_form">      
+                     <span title="Checklist_">
+                       <lightning-icon icon-name="utility:date_input" size="xx-small" alternative-text="Indicates approval">
+                       </lightning-icon>
+                     </span>
+                   </div>
+                </td>                
+                <td aria-selected="true" class="slds-cell-edit slds-cell_action-mode" role="gridcell">
+                  <span class="slds-grid slds-grid_align-spread">
+                    <!--<span class="slds-truncate" title="Acme">Acme</span>       champ de saisie-->
+                    <lightning-input type="text" label=" " value=" "  class="task_subject_td_lightning_input"></lightning-input>
+
+                  </span>
+                  <section aria-describedby="dialog-body-id-14" class="slds-popover slds-popover slds-popover_edit" role="dialog" style="position:absolute;top:0;left:0.0625rem; display:none;">
+                    <div class="slds-popover__body" id="dialog-body-id-14">
+                      <div class="slds-media">
+                        <div class="slds-media__body">
+                          <div class="slds-form-element slds-grid slds-wrap">
+                            <label class="slds-form-element__label slds-form-element__label_edit slds-no-flex" for="company-01">
+                              <span class="slds-assistive-text">Company</span>
+                            </label>
+                            <div class="slds-form-element__control slds-grow">
+                              <input type="text" class="slds-input" id="company-01" value="Acme Enterprises" />
+                            </div> 
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </td>
+                <td class="slds-cell-edit" role="gridcell">
+                  <span class="slds-grid slds-grid_align-spread">
+                    <!--<span class="slds-truncate" title="$25,000,000"></span>-->
+                      <c-project-task-statuts></c-project-task-statuts>
+                  </span>
+                </td>
+                <td class="slds-cell-edit" role="gridcell">
+                  <span class="slds-grid slds-grid_align-spread">
+                    <!--<span class="slds-truncate" title="$25,000,000">0</span>-->
+                    <input class="slds-input" type="number" />
+
+                  </span>
+                </td>
+                <td class="slds-cell-edit" role="gridcell">
+                  <span class="slds-grid slds-grid_align-spread">
+                    <!--<span class="slds-truncate" title="$25,000,000">1 day</span>-->
+                    <input class="slds-input" type="number" />
+                  </span>
+                </td>
+                <td class="slds-cell-edit" role="gridcell">
+                  <span class="slds-grid slds-grid_align-spread">
+                    <span class="slds-truncate" title="$25,000,000">22/02/2022</span>
+                    <button class="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small" tabindex="-1" title="Edit Amount of Acme - 1,200 Widgets">
+                      <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_edit" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                      </svg>
+                      <span class="slds-assistive-text">Edit Amount of Acme - 1,200 Widgets</span>
+                    </button>
+                  </span>
+                </td>  
+                <td class="slds-cell-edit" role="gridcell">
+                  <span class="slds-grid slds-grid_align-spread">
+                    <span class="slds-truncate" title="$25,000,000"> klj</span>
+                    <button class="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small" tabindex="-1" title="Edit Amount of Acme - 1,200 Widgets">
+                      <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_edit" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                      </svg>
+                      <span class="slds-assistive-text">Edit Amount of Acme - 1,200 Widgets</span>
+                    </button>
+                  </span>
+                </td>
+                <td class="slds-cell-edit" role="gridcell">
+                  <span class="slds-grid slds-grid_align-spread">
+                    <span class="slds-truncate" title="$25,000,000">tki</span>
+                    <button class="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small" tabindex="-1" title="Edit Amount of Acme - 1,200 Widgets">
+                      <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_edit" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                      </svg>
+                      <span class="slds-assistive-text">Edit Amount of Acme - 1,200 Widgets</span>
+                    </button>
+                  </span>
+                </td> 
+                <td class="slds-cell-edit" role="gridcell">
+                  <span class="slds-grid slds-grid_align-spread">
+                    <span class="slds-truncate" title="$25,000,000">poij</span>
+                    <button class="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small" tabindex="-1" title="Edit Amount of Acme - 1,200 Widgets">
+                      <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_edit" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                      </svg>
+                      <span class="slds-assistive-text">Edit Amount of Acme - 1,200 Widgets</span>
+                    </button>
+                  </span>
+                </td>  
+                <td class="slds-cell-edit" role="gridcell">
+                  <span class="slds-grid slds-grid_align-spread">
+                    <!--<span class="slds-truncate" title="$25,000,000"></span>-->
+                      <c-project-task-statuts></c-project-task-statuts>
+                  </span>
+                </td>                    
+                <td aria-selected="true" class="slds-cell-edit slds-cell_action-mode" role="gridcell">
+                    <!--<span class="slds-truncate" title="Acme">Acme</span>       champ de saisie-->
+                    <lightning-input type="text" label=" " value=" "  class=" "></lightning-input>
+                    <span class="slds-grid slds-grid_align-spread">
+                     <button class="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small" tabindex="-1" title="Edit Amount of Acme - 1,200 Widgets">
+                       <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_edit" aria-hidden="true">
+                         <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                       </svg>
+                       <span class="slds-assistive-text">Edit Amount of Acme - 1,200 Widgets</span>
+                     </button>
+                   </span>
+                </td>                                                                
+             </tr>
+           
+         </tbody>
+      </table>
+   </div>  
+</template>
